@@ -1,5 +1,6 @@
 %define		_plugin		fullindex
-Summary:	Dokuwiki Full Index plugin
+Summary:	DokuWiki Full Index plugin
+Summary(pl.UTF-8):	Wtyczka Full Index (pełnego indeksu) dla DokuWiki
 Name:		dokuwiki-plugin-%{_plugin}
 Version:	1.0
 Release:	0.1
@@ -20,8 +21,22 @@ A replacement for the built in index action of DokuWiki.
 - Assign a unique page title and number to each page and namespace.
 - Sort pages and namespaces by assigned numbers.
 - Shows all pages in expanded view (may be too much for large wikis).
-- Includes a 'level' navigation to show or hide namespaces up to a certain level.
-- Graphics in front of the namespaces are clickable to collapse/expand namespaces.
+- Includes a 'level' navigation to show or hide namespaces up to a certain
+  level.
+- Graphics in front of the namespaces are clickable to collapse/expand
+  namespaces.
+
+%description -l pl.UTF-8
+Zamiennik dla wbudowanego indeksu z DokuWiki:
+- przyporządkowuje unikalny tytuł i numer strony do każdej strony i
+  przestrzeni nazw;
+- sortuje strony i przestrzenie nazw po przypisanych numerach;
+- pokazuje wszystkie strony w rozwiniętym widoku (może być zbyt duży
+  dla wielkich wiki);
+- zawiera nawigację "poziomową" pokazującą lub ukrywającą przestrzenie
+  nazw do określonego poziomu;
+- obrazki przed przestrzeniami nazw służą do zwijania i rozwijania
+  przestrzeni nazw.
 
 %prep
 %setup -qc
