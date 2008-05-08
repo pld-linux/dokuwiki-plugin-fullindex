@@ -1,9 +1,9 @@
-%define		_plugin		fullindex
+%define		plugin		fullindex
 Summary:	DokuWiki Full Index plugin
 Summary(pl.UTF-8):	Wtyczka Full Index (pełnego indeksu) dla DokuWiki
-Name:		dokuwiki-plugin-%{_plugin}
+Name:		dokuwiki-plugin-%{plugin}
 Version:	1.0
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://mtbrains.home.comcast.net/~mtbrains/products/DWAdds/fullindex.zip
@@ -13,8 +13,8 @@ Requires:	dokuwiki >= 20061106
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_dokudir	/usr/share/dokuwiki
-%define		_plugindir	%{_dokudir}/lib/plugins/%{_plugin}
+%define		dokudir		/usr/share/dokuwiki
+%define		plugindir	%{dokudir}/lib/plugins/%{plugin}
 
 %description
 A replacement for the built in index action of DokuWiki.
@@ -43,13 +43,13 @@ Zamiennik dla wbudowanego indeksu z DokuWiki:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd %{_plugin}
-install -d $RPM_BUILD_ROOT%{_plugindir}
-cp -a . $RPM_BUILD_ROOT%{_plugindir}
+cd %{plugin}
+install -d $RPM_BUILD_ROOT%{plugindir}
+cp -a . $RPM_BUILD_ROOT%{plugindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_plugindir}
+%{plugindir}
