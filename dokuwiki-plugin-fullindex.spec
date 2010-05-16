@@ -9,6 +9,7 @@ Group:		Applications/WWW
 Source0:	http://mtbrains.home.comcast.net/~mtbrains/products/DWAdds/fullindex.zip
 # Source0-md5:	394239765433d4a418e2a8e21d73d19d
 URL:		http://mtbrains.home.comcast.net/~mtbrains/products/DWAdds/index.html
+BuildRequires:	unzip
 Requires:	dokuwiki >= 20061106
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
